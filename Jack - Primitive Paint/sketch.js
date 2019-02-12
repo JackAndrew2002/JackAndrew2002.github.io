@@ -7,6 +7,7 @@
 
 let x = mouseX;
 let y = mouseY;
+let avenir;
 
 
 function setup() {
@@ -22,15 +23,21 @@ keyTyped();
 
 function keyTyped() {
   if (key === 'a') {
-    fill = (random(1, 255), random(1, 255), random(1, 255));
+    fill(random(1, 255), random(1, 255), random(1, 255));
     rect(mouseX, mouseY, 55, 100)
   } 
   else if (key === 's') {
-    fill = (random(1, 255), random(1, 255), random(1, 255));
-    ellipse(mouseX, mouseY, 55, 100)
+    fill(random(1, 255), random(1, 255), random(1, 255));
+    ellipse(mouseX, mouseY, 55, 55)
   }
   else if (key === 'd'){
-    fill = (random(1, 255), random(1, 255), random(1, 255));
-    triangle(mouseX += 20, mouseY += 20, mouseX -= 20, mouseY -= 20);
+    fill(random(1, 255), random(1, 255), random(1, 255));
+    triangle(mouseX += 20, mouseY += 20, mouseX -= 20, mouseY -= 20, mouseX += 20, mouseY -= 20);
   }
 }
+ function preload(){
+   avenir = loadFont(' assets/Avenir.otf')
+ }
+ function setup(){
+   
+ }
