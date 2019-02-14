@@ -7,8 +7,11 @@
 
 let x = mouseX;
 let y = mouseY;
-let avenir;
-
+let name = 'Jack Andrew'
+let state = 0;
+const rectSize = 30
+let p = 0
+let q = 0
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -35,9 +38,36 @@ function keyTyped() {
     triangle(mouseX += 20, mouseY += 20, mouseX -= 20, mouseY -= 20, mouseX += 20, mouseY -= 20);
   }
 }
- function preload(){
-   avenir = loadFont(' assets/Avenir.otf')
- }
- function setup(){
-   
- }
+
+if (state === 0){
+  p += 10;
+  if (p > windowWidth - rectSize) state = 1;
+}
+else if (state === 1){
+
+}
+rect(x,y,rectSize, rectSize);
+fill(255, 192, 203)
+
+if (state === 1){
+  q += 10;
+  if (q > windowHeight - rectSize) state = 2;
+}
+else if (state === 2){
+
+}
+if (state === 2){
+  p -= 10;
+  if (p <=0) state = 3;
+}
+else if (state === 3){
+
+}
+if (state === 3){
+  q -= 10;
+  if (q <=0) state = 0;
+}
+else if (state === 0){
+
+}
+

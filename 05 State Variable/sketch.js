@@ -25,6 +25,7 @@ else if (state === 1){
 
 }
 rect(x,y,rectSize, rectSize);
+fill(255, 192, 203)
 
 if (state === 1){
   y += 10;
@@ -48,3 +49,4 @@ else if (state === 0){
 
 }
 }
+
