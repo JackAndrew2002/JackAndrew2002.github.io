@@ -39,35 +39,4 @@ function keyTyped() {
   }
 }
 
-if (state === 0){
-  p += 10;
-  if (p > windowWidth - rectSize) state = 1;
-}
-else if (state === 1){
-
-}
-rect(x,y,rectSize, rectSize);
-fill(255, 192, 203)
-
-if (state === 1){
-  q += 10;
-  if (q > windowHeight - rectSize) state = 2;
-}
-else if (state === 2){
-
-}
-if (state === 2){
-  p -= 10;
-  if (p <=0) state = 3;
-}
-else if (state === 3){
-
-}
-if (state === 3){
-  q -= 10;
-  if (q <=0) state = 0;
-}
-else if (state === 0){
-
-}
 
