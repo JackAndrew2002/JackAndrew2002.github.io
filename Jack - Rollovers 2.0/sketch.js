@@ -6,15 +6,12 @@
 // - describe what you did to take this project "above and beyond"
 
 let rectX, rectY, rectW, rectH;
-let rectColour = 0;
-let quad1fill = 0;
-let quad2fill = 0;
-let quad3fill = 0;
-let quad4fill = 0;
-let quadrant1 = rect(0, 0, rectW, rectH);
-let quadrant2 = rect(width/2, 0, rectW, rectH);
-let quadrant3 = rect(0, height/2, rectW, rectH);
-let quadrant4 = rect(width/2, height/2, rectW, rectH)
+let rectColour = 255;
+let colour1 = 0;
+let colour2 = 0;
+let colour3 = 0;
+let colour4 = 0;
+let quadrant = 1;
 
 
 function setup() {
@@ -23,32 +20,45 @@ function setup() {
   rectY = height;
   rectW = width/2;
   rectH = height/2;
+
+
  
 }
 
 function draw() {
-  background(0);
+  background(255);
   fill(rectColour);
   rect(0, 0, rectW, rectH);
   rect(width/2, 0, rectW, rectH);
   rect(0, height/2, rectW, rectH);
   rect(width/2, height/2, rectW, rectH);
+  //noStroke();
 
 if (mouseX <= width/2 && mouseY <= height/2){
-  fill(255);
+  colour1 = 0;
+  fill(colour1);
   rect(0, 0, rectW, rectH);
 }
+else{
+  colour1 += 10;
+  fill(colour1);
+}
 if (mouseX <= width/2 && mouseY >= height/2){
-  fill(255);
+  colour2 = 0;
+  fill(colour2);
   rect(0, height/2, rectW, rectH);
 }  
+else{
+  colour2 += 10;
+  fill(colour2);
+}
 if (mouseX >= width/2 && mouseY <= height/2){
-  fill(255);
+  fill(0);
   rect(width/2, 0, rectW, rectH);
   
 }
 if (mouseX >= width/2 && mouseY >= height/2){
-  fill(255);
+  fill(0);
   rect(width/2, height/2, rectW, rectH);
 } 
 
