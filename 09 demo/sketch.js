@@ -28,7 +28,7 @@ function drawTargetWhile(){
 function drawTargetFor(){
 
   for(let i = 5; i > 0; i--){
-    FileList(colors[i-1]);
+    fill(colors[i-1]);
     ellipse(x,y,i*40, i*40);
   }
 }

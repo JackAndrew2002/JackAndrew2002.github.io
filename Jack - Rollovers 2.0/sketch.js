@@ -41,7 +41,8 @@ if (mouseX <= width/2 && mouseY <= height/2){
 }
 else{
   colour1 += 10;
-  fill(colour1);
+  fill(colour1)
+
 }
 if (mouseX <= width/2 && mouseY >= height/2){
   colour2 = 0;
@@ -50,17 +51,28 @@ if (mouseX <= width/2 && mouseY >= height/2){
 }  
 else{
   colour2 += 10;
-  fill(colour2);
+  fill(colour2)
+
 }
 if (mouseX >= width/2 && mouseY <= height/2){
-  fill(0);
+  colour3 = 0;
+  fill(colour3);
   rect(width/2, 0, rectW, rectH);
-  
+}
+else{
+  colour3 += 10;
+  fill(colour3)
+
 }
 if (mouseX >= width/2 && mouseY >= height/2){
-  fill(0);
+  colour4 += 10;
+  fill(colour4);
   rect(width/2, height/2, rectW, rectH);
 } 
+else{
+  colour4 += 10;
+  fill(colour4)
+}
 
   
 }
