@@ -64,14 +64,20 @@ else{
   fill(colour3)
 
 }
-if (mouseX >= width/2 && mouseY >= height/2){
-  colour4 += 10;
+if (mouseX >= width/2 && mouseY <= height/2){
+  colour4 += 0;
   fill(colour4);
-  rect(width/2, height/2, rectW, rectH);
+  rect(0, height/2, rectW, rectH);
 } 
 else{
   colour4 += 10;
   fill(colour4)
+}
+
+if(mouseX >= width/2 && mouseY <= height/2){
+  colour4 += 10;
+  fill(colour4);
+  rect(width, height/2, rectW, rectH);
 }
 
   
