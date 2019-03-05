@@ -71,7 +71,8 @@ if (mouseX >= width/2 && mouseY <= height/2){
 } 
 else{
   colour4 += 10;
-  fill(colour4)
+  fill(0)
+  
 }
 
 if(mouseX >= width/2 && mouseY <= height/2){
