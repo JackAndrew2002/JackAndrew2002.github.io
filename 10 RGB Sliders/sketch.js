@@ -45,12 +45,8 @@ function draw() {
     ellipse(x, y, 25, 25);
     ellipse.position(40, 30);
   }
-  else{
-    rect(x, y, 25, 25);
-    rect.position(40, 30);
+  if (val === "Rectangle") {}
   }
 
-  ellipse(x, y, 25, 25)
 
-}
 
