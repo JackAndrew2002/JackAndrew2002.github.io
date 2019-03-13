@@ -25,8 +25,9 @@ function draw() {
   }
   var y = 50;
   while(y < height){
-    line(0, y, width, y);
+    line(0,y,width, y);
     y = y + 50;
-    fill(int(random(255), 200, 100))
+    //fill(int(random(255), 200, 100))
 }
 }
+ 
