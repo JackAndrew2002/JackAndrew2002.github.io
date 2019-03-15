@@ -26,10 +26,10 @@ function draw() {
 
 
 function Squares(){
-  rect(0, 0, rectW, rectH);
-  rect(width/2, 0, rectW, rectH);
-  rect(0, height/2, rectW, rectH);
-  rect(width/2, height/2, rectW, rectH);
+  rect(0, 0, rectW/2, rectH/2);
+  rect(width/2, 0, rectW/2, rectH/2);
+  rect(0, height/2, rectW/2, rectH/2);
+  rect(width/2, height/2, rectW/2, rectH/2);
 }
 
 function determineQuadrant(){
@@ -90,7 +90,10 @@ if (mouseX <= width/2 && mouseY <= height/2){
     colour4 += 10;
     fill(colour4);
     rect(width, height/2, rectW, rectH);
-  }else{
+  }
+  else{
     colour4 += 10;
     fill(0);
+  }
+}
 }
