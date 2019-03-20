@@ -3,24 +3,35 @@
 let lionL, lionR;
 let direction = 1;
 let pinImages = [];
+let counter = 0;
+let speed = 1; //1 - 8
 //1 = left 
 //2 = right
 function preload(){
   lionL = loadImage('assets/lion-left.png')
   lionR = loadImage('assets/lion-right.png')
-  pinImages.push(loadImage('assets/pin-00.png'));
+  for (let i = 0; i < 9; i++){
+    //
+  pinImages.push(loadImage('assets/pin-0' + i + '.png'));
+}
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  frameRate(15);
 }
 
 function draw() {
   background(220);
   lions();
-  images(pinImages[0], width/2, height/2);
+  images(pinImages[counter], width/2, height/2);
 
-
+  speed = map(mouseX, 0, widith, 1, 8);
+  
+  if (frameCount % speed === 0){
+  counter ++;
+  if (counter > 8) counter = 0;
+  }
 
   
 function lions(){
